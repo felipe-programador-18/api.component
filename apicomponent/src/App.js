@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css';
+import './App.css'
+import Header from './header'
 
 const Title = ({children}) =>{
  //  return JSON.stringify(props)
@@ -30,6 +31,11 @@ const Input = ( {label, onChange, ...props}) => {
   )
 }
 
+const linkGatbsy = ({to, children}) => {
+   return <a href={to}> {children} </a>
+}
+
+
 function App() {
  const [form, setform] = useState({
    nome: '',
@@ -50,7 +56,9 @@ function App() {
       </pre>
      <Input label='Nome' name='nome' onChange={onChange} style={{background:'red'}} />
      <Input label='Email' name='email'  onChange={onChange} />
+      
 
+      <Header Link={linkGatbsy} />
     </div>
   );
 }
