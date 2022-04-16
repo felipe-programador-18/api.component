@@ -25,8 +25,9 @@ const Input = ( {label, onChange, ...props}) => {
     <label>
       {label}
      
-      <input onChange={onValueChange} {...props} />
+      <input onChange={onValueChange} {...props}/>
       {value.length}  caracteres!!
+    
     </label>
   )
 }
